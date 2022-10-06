@@ -1,0 +1,4 @@
+1. Export to glb from Rhino
+2. PS C:\Users\pawel\desktop\jobs\fabrication\jewelry\forweb\draco> npx gltfjsx b3.glb
+3. Move the b3 js class to folder
+4. Move the original glb model to public folder
