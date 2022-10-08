@@ -14,7 +14,6 @@ export function ModelBoids3({position, scale}) {
       // ref.current.position.y = (1 + Math.sin(t / 1.5)) / 10
     })
 
-
   return (
     <group
     position={position}
