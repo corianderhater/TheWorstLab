@@ -1,10 +1,9 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { Color, MeshStandardMaterial } from 'three'
 import {useFrame } from "@react-three/fiber"
 
 export function ModelNoise({position, scale}) {
-  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/3d/noise.glb')
+  const { nodes } = useGLTF(process.env.PUBLIC_URL + '/3d/noise.glb')
   const ref = useRef()
 
   useFrame((state) => {

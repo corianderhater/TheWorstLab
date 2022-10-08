@@ -4,17 +4,17 @@ import { useGLTF } from '@react-three/drei'
 import {useFrame } from "@react-three/fiber"
 
 export function ModelBoids3({position, scale}) {
-  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + "/3d/b3.glb")
+  const { nodes} = useGLTF(process.env.PUBLIC_URL + "/3d/b3.glb")
   const ref = useRef()
     useFrame((state) => {
       const t = state.clock.getElapsedTime()
       ref.current.rotation.z = -0.2 - (1 + Math.sin(t / 1.5))
       ref.current.rotation.x = Math.cos(t / 4) 
-      //ref.current.rotation.y = Math.sin(t / 4) 
-      //ref.current.position.y = (1 + Math.sin(t / 1.5)) / 10
+      // ref.current.rotation.y = Math.sin(t / 4) 
+      // ref.current.position.y = (1 + Math.sin(t / 1.5)) / 10
     })
 
-    
+
   return (
     <group
     position={position}

@@ -1,10 +1,9 @@
 import { OrbitControls, PerspectiveCamera, Environment, Float } from "@react-three/drei";
 import { Suspense } from "react";
-import { ModelBoids } from "./ModelBoids";
 import { ModelBoids3 } from "./ModelBoids3";
 import { ModelNoise } from "./ModelNoise";
 import { ModelSzerszen } from "./ModelSzerszen";
-import { EffectComposer, HueSaturation, ChromaticAberration, GodRays, DepthOfField, BrightnessContrast } from "@react-three/postprocessing";
+import { EffectComposer, BrightnessContrast } from "@react-three/postprocessing";
 
 
 export function SceneContainer() {
@@ -12,7 +11,7 @@ export function SceneContainer() {
     return (
         <Suspense fallback={null}>
 
-            //environment
+            {/* environment */}
             <Environment background={true} files={process.env.PUBLIC_URL + "textures/gradientHDRI.hdr"}/>
             <Environment background={false} files={process.env.PUBLIC_URL + "textures/neon.hdr"} />
             <ambientLight intensity={0.5} />
@@ -20,7 +19,7 @@ export function SceneContainer() {
             <OrbitControls target={[1,5,0]} maxPolarAngle={Math.PI * 0.5} minPolarAngle={Math.PI * 0.5} enableZoom={true}/>
             
 
-            //models
+            {/* models */}
             <ModelBoids3 position={[0,35,0]} scale={scaleAll}/>
             <ModelNoise position={[0,10,0]} scale={scaleAll}/>
             <Float speed={10} rotationIntensity={10} floatIntensity={10}>
@@ -28,11 +27,12 @@ export function SceneContainer() {
             </Float>
 
 
-            //effects
+            {/* effects */}
             <EffectComposer stencilBuffer={false}>
-                {/* <DepthOfField focusDistance={1} focalLength={4} bokehScale={7}/>  */}
+                
                 <BrightnessContrast brightness={0.0} contrast={0.035} />
-                <ChromaticAberration radialModulation={true} offset={[0.00175, 0.00175]} />
+                {/* <DepthOfField focusDistance={1} focalLength={4} bokehScale={7}/> 
+                <ChromaticAberration radialModulation={true} offset={[0.00175, 0.00175]} /> */}
                 
             </EffectComposer>
 
