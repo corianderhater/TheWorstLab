@@ -5,10 +5,10 @@ import { ModelNoise } from "./ModelNoise";
 import { ModelSzerszen } from "./ModelSzerszen";
 import { EffectComposer, BrightnessContrast } from "@react-three/postprocessing";
 
-
 export function SceneContainer() {
     const scaleAll = 0.9;
     return (
+        
         <Suspense fallback={null}>
 
             {/* environment */}
@@ -22,7 +22,7 @@ export function SceneContainer() {
             {/* models */}
             <ModelBoids3 position={[0,35,0]} scale={scaleAll}/>
             <ModelNoise position={[0,10,0]} scale={scaleAll}/>
-            <Float speed={10} rotationIntensity={10} floatIntensity={10}>
+            <Float speed={4} rotationIntensity={4} floatIntensity={10}>
                 <ModelSzerszen position={[0,-15,0]} scale={scaleAll}/>
             </Float>
 

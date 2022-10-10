@@ -8,7 +8,7 @@ export function ModelNoise({position, scale}) {
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
-    ref.current.rotation.z = -0.2 - (1 + Math.sin(t * 30)/20)
+    ref.current.rotation.z = Math.PI * t / 4 + Math.pow(Math.sin(t * 2)/10, 7)
     ref.current.rotation.y = Math.sin(t / 1)
   })
 
