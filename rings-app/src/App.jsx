@@ -7,7 +7,6 @@ import { Navbar } from "./Navbar";
 function App() {
     return (
     <>
-        <Header/>
         <Canvas>
             <SceneContainer/>
         </Canvas>

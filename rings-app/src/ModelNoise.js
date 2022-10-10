@@ -1,27 +1,39 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
 import {useFrame } from "@react-three/fiber"
 
 export function ModelNoise({position, scale}) {
   const { nodes } = useGLTF(process.env.PUBLIC_URL + '/3d/noise.glb')
+    // This reference gives us direct access to the THREE.Mesh object
   const ref = useRef()
+
+  const [hovered, hover] = useState(false)
+  const [clicked, click] = useState(false)
+
+  const positionNow = (clicked ? [20,0,0] : position)
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
-    ref.current.rotation.z = Math.PI * t / 4 + Math.pow(Math.sin(t * 2)/10, 7)
-    ref.current.rotation.y = Math.sin(t / 1)
+    ref.current.rotation.z = Math.PI * t / 40
+    ref.current.rotation.y = Math.sin(t / 5) 
   })
 
   return (
     <group 
-    position={position} 
+    position={positionNow} 
     scale={scale}
-    ref={ref}  
+     
     dispose={null}>
 
-      <mesh geometry={nodes.mesh_0.geometry}>
+      <mesh 
+      ref={ref} 
+      geometry={nodes.mesh_0.geometry}
+      onClick={(event) => click(!clicked)}
+      onPointerOver={(event) => hover(true)}
+      onPointerOut={(event) => hover(false)}
+      >
         <meshPhysicalMaterial 
-        color='gray'
+        color= {hovered ? 'gold' : 'white'}
         clearcoat={1}
         clearcoatRoughness={1}
         roughness={0}
