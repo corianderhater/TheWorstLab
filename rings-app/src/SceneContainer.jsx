@@ -16,7 +16,7 @@ export function SceneContainer() {
             <Environment background={false} files={process.env.PUBLIC_URL + "textures/neon.hdr"} />
             <ambientLight intensity={0.5} />
             <PerspectiveCamera makeDefault fov={50} position={[-100, 0, 0]} />
-            <OrbitControls target={[1,5,0]} maxPolarAngle={Math.PI * 0.5} minPolarAngle={Math.PI * 0.5} enableZoom={true}/>
+            <OrbitControls target={[1,5,0]} maxPolarAngle={Math.PI * 0.5} minPolarAngle={Math.PI * 0.5} enableZoom={false}/>
             
 
             {/* models */}

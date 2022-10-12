@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useGLTF, Html } from '@react-three/drei'
 import {useFrame } from "@react-three/fiber"
+import './index.css';
+
 
 export function ModelNoise({position, scale}) {
   const { nodes } = useGLTF(process.env.PUBLIC_URL + '/3d/noise.glb')
@@ -41,7 +43,15 @@ export function ModelNoise({position, scale}) {
         reflectivity={1}
         emissive="red"
         emissiveIntensity={0.02}/>
+
+
+
       </mesh>
+      <Html scale={20} rotation={[0, 0, 0]} position={[0, -10, 0]} occlude>
+          <div className="annotation">
+            6.550 $ <span style={{ fontSize: '1.5em' }}>🥲</span>
+          </div>
+        </Html>
     </group>
   )
 }
