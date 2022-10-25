@@ -15,7 +15,7 @@ export function ModelSzerszen({position, scale}) {
       <mesh geometry={nodes.mesh_0.geometry}>
       
         <meshPhysicalMaterial 
-        color='gray'
+        color='white'
         clearcoat={1}
         clearcoatRoughness={1}
         roughness={0}

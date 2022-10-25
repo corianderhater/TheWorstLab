@@ -22,7 +22,7 @@ export function ModelBoids3({position, scale}) {
      dispose={null}>
       <mesh receiveShadow castShadow geometry={nodes.mesh_0.geometry}>
       <meshPhysicalMaterial 
-        color='cyan'
+        color='white'
         clearcoat={1}
         clearcoatRoughness={1}
         roughness={0}

@@ -1,15 +1,17 @@
-import { Html } from '@react-three/drei'
 import React from 'react'
-import './index.css'
+import './index.scss'
+import { ButtonNew } from './ButtonNew'
+import { Link } from 'react-router-dom'
 
-function Header() {
+const Header = () =>{
   return (
-    <header fullscreen>
-      <div className='container header__container'>
-          <h2 className='primary'>Too cool for shool</h2>
-          <h5 className='primary'>algorithmic jewelry</h5>
-      </div>
+
+    <header>
+        <div>Pif</div>
+        <div>Paf</div>
+        <div>Lab</div>
     </header>
+
   )
 } 
 
