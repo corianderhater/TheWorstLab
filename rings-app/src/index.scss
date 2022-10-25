@@ -6,19 +6,19 @@ html, body, #root {
     overflow: hidden;
     --primary: gray;
     --clicked: red;
-    --white: rgba(255, 255, 255, 0.652);
+    --white: rgba(255, 255, 255, 0.365);
     --black: rgba(0, 0, 0, 0.478);
     --greyLight-1: #E4EBF5;
     --greyLight-2: #c8d0e7;
-    --greyLight-3: #bec8e4;
+    --greyLight-3: #5e688490;
     --greyDark: #9baacf;
     --purple: purple;
 }
 
 $shadow: .3rem .3rem .6rem var(--greyLight-1), 
 -.2rem -.2rem .5rem var(--white);
-$inner-shadow: inset .2rem .2rem .5rem var(--greyLight-3), 
-inset -.2rem -.2rem .5rem var(--greyLight-1);
+$inner-shadow: inset .2rem .2rem .8rem var(--greyLight-3), 
+inset -.2rem -.2rem .5rem var(--white);
 
 header {
   background: rgba(217, 217, 217, 0.063);
@@ -28,7 +28,6 @@ header {
   left: 1rem;
   z-index: 1;
 }
-
 
 
 nav {

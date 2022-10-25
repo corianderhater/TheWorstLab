@@ -12,7 +12,7 @@ import Header from "./Header";
 function App() {
     return (
         <>
-        <Header/>
+            <Header/>
             <Navbar />
             <Routes>
                 <Route path='/' element={<Home />} />

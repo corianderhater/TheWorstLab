@@ -1,8 +1,5 @@
 import { OrbitControls, PerspectiveCamera, Environment, Float } from "@react-three/drei";
 import { Suspense } from "react";
-import { ModelBoids3 } from "../ModelBoids3";
-import { ModelNoise } from "../ModelNoise";
-import { ModelSzerszen } from "../ModelSzerszen";
 import { EffectComposer, BrightnessContrast } from "@react-three/postprocessing";
 import { Canvas } from "@react-three/fiber";
 

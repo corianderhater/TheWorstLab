@@ -1,13 +1,14 @@
 import { OrbitControls, PerspectiveCamera, Environment, Float } from "@react-three/drei";
 import { Suspense } from "react";
-import { ModelBoids3 } from "../ModelBoids3";
-import { ModelNoise } from "../ModelNoise";
-import { ModelSzerszen } from "../ModelSzerszen";
 import { EffectComposer, BrightnessContrast } from "@react-three/postprocessing";
 import { Canvas } from "@react-three/fiber";
+import { ModelCard } from "../Components/ModelCard";
+import data from '../modelsData.json';
+import { Box3 } from "three";
 
 export function Home() {
     const scaleAll = 0.9;
+    // debugger
     return (
         <Canvas>
             <Suspense fallback={null}>
@@ -21,11 +22,13 @@ export function Home() {
                 
 
                 {/* models */}
-                <ModelBoids3 position={[0,35,0]} scale={scaleAll}/>
-                <ModelNoise position={[0,10,0]} scale={scaleAll}/>
-                <Float speed={4} rotationIntensity={4} floatIntensity={10}>
-                    <ModelSzerszen position={[0,-15,0]} scale={scaleAll}/>
-                </Float>
+                {/* <ModelBoids3 position={[0,35,0]} scale={scaleAll}/> */}
+                <ModelCard modelPath={data[0].url} position={[0,35,0]} scale={scaleAll}/>
+                <ModelCard modelPath={data[1].url} position={[0,10,0]} scale={scaleAll}/>
+                
+                    <ModelCard modelPath={data[2].url} position={[0,-15,0]} scale={scaleAll}/>
+                {/* <Float speed={4} rotationIntensity={4} floatIntensity={10}>
+                </Float> */}
 
 
                 {/* effects */}

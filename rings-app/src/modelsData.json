@@ -1,0 +1,27 @@
+
+[
+    {
+        "index": 1,
+        "name": "Szerszen",
+        "fullName": "Boid2",
+        "url":"/3d/szerszen.glb",
+        "description":"tralalalallala",
+        "cost": 230
+    },
+    {
+        "index": 2,
+        "name": "Boid",
+        "fullName": "Boid1",
+        "url": "/3d/b3.glb",
+        "description":"tralalalallala",
+        "cost": 230
+    },
+    {
+        "index": 3,
+        "name": "Noise",
+        "fullName": "SimplexNoise",
+        "url": "/3d/noise.glb",
+        "description":"tralalalallala",
+        "cost": 130
+    }
+]
