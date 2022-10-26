@@ -12,20 +12,20 @@ export function ModelCard({modelPath, position, scale}) {
 
   const [hovered, hover] = useState(false)
   const [clicked, click] = useState(false)
- const bbox = new THREE.Box3();
+
+ const bbox = new THREE.Box3().setFromObject(nodes.mesh_0, true);
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
     ref.current.rotation.z = Math.PI * t / 40
     ref.current.rotation.y = Math.sin(t / 5) 
   })
-
+ 
   return (
     <group 
     position={clicked ? [20,0,0] : position} 
     scale={scale} 
     dispose={null}>
-      
       <mesh ref={ref} geometry={nodes.mesh_0.geometry}
       onClick={(event) => click(!clicked)}
       onPointerOver={(event) => hover(true)}
