@@ -9,12 +9,25 @@ const Navbar = () =>{
       <nav>
         <div className='navbar-item' >
           <Link to='/'>
-            <button className='button button-1'>Jewels</button>
+            <button className='button button-1'>Collection</button>
           </Link>
         </div>
+
         <div className='navbar-item'>
           <Link to='/collections'>
-            <button className='button button-1'>How</button>
+            <button className='button button-1'>How its done</button>
+          </Link>
+        </div>
+
+        <div className='navbar-item'>
+          <Link to='/collections'>
+            <button className='button button-1'>Gallery</button>
+          </Link>
+        </div>
+
+        <div className='navbar-item'>
+          <Link to='/collections'>
+            <button className='button button-1'>Contact</button>
           </Link>
         </div>
       </nav>

@@ -9,27 +9,32 @@ export function ModelCard({modelPath, position, scale}) {
   const { nodes } = useGLTF(process.env.PUBLIC_URL + modelPath)
     // This reference gives us direct access to the THREE.Mesh object
   const ref = useRef()
-
   const [hovered, hover] = useState(false)
   const [clicked, click] = useState(false)
+  var hitGeom = new THREE.BoxBufferGeometry(13, 13, 13);
+var hitMat = new THREE.MeshBasicMaterial({visible: false});
+var hitSphere = new THREE.SphereGeometry(14, 4, 4);
 
- const bbox = new THREE.Box3().setFromObject(nodes.mesh_0, true);
-
+var bbox = new THREE.Box3().setFromObject(nodes.mesh_0);
+// debugger
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
     ref.current.rotation.z = Math.PI * t / 40
     ref.current.rotation.y = Math.sin(t / 5) 
   })
- 
+
   return (
-    <group 
-    position={clicked ? [20,0,0] : position} 
-    scale={scale} 
-    dispose={null}>
-      <mesh ref={ref} geometry={nodes.mesh_0.geometry}
+    <group position={clicked ? [-60,5,0] : position} scale={scale} dispose={null}>
+
+    <mesh 
+      geometry={hitSphere} material={hitMat}
       onClick={(event) => click(!clicked)}
       onPointerOver={(event) => hover(true)}
-      onPointerOut={(event) => hover(false)}>
+      onPointerOut={(event) => hover(false)}
+      ></mesh>
+
+      <mesh ref={ref} geometry={nodes.mesh_0.geometry}
+>
         <meshPhysicalMaterial 
         color= {hovered ? 'gold' : 'white'}
         clearcoat={1}

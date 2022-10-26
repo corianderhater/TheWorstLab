@@ -1,16 +1,16 @@
 html, body, #root {
     width: 100%;
     height: 100%;
-
+    background-color: #292929;
     margin: 0;
     overflow: hidden;
     --primary: gray;
     --clicked: red;
-    --white: rgba(255, 255, 255, 0.365);
+    --white: rgba(255, 255, 255, 0.51);
     --black: rgba(0, 0, 0, 0.478);
     --greyLight-1: #E4EBF5;
-    --greyLight-2: #c8d0e7;
-    --greyLight-3: #5e688490;
+    --greyLight-2: #1b1c1e;
+    --greyLight-3: #00000090;
     --greyDark: #9baacf;
     --purple: purple;
 }
@@ -62,6 +62,7 @@ nav {
 .button {
   align-items: center;
   background-color: transparent;
+  color:rgb(150, 149, 149);
   border-width: 0;
   border-radius: 50px;
   display: flex;
