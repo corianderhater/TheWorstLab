@@ -1,18 +1,13 @@
-import React from 'react'
-import './index.scss'
-import { ButtonNew } from './ButtonNew'
-import { Link } from 'react-router-dom'
+import React from "react";
+import "./index.scss";
 
-const Header = () =>{
+const Header = () => {
   return (
-
     <header>
-        <div>Pif</div>
-        <div>Paf</div>
-        <div>Lab</div>
+      <div>Mass</div>
+      <div>Mess</div>
     </header>
+  );
+};
 
-  )
-} 
-
-export default Header
+export default Header;
