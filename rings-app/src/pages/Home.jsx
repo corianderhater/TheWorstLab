@@ -21,6 +21,7 @@ export function Home() {
   const [selectedRing, setSelectedRing] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const isHorizontal = window.innerWidth > window.innerHeight ? true : false;
+
   function handleClick(index) {
     setSelectedRing(data[index]);
     setIsOpen(true);

@@ -22,6 +22,7 @@ export function ModelCard({
   const [hovered, hover] = useState(false);
   var hitMat = new THREE.MeshBasicMaterial({ visible: false });
   let planeIntersectPoint = new THREE.Vector3();
+  //const { scale } = useSpring({ scale: active ? 1.5 : 1 });
 
   //dragging
 
