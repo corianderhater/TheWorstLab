@@ -13,6 +13,7 @@ import Collections from "./pages/Collections";
 import Collection2 from "./pages/Collection2";
 import { Home2 } from "./pages/Home2";
 import Header from "./Header";
+import { Gallery } from "./pages/Gallery";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/collections" element={<Home2 />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </>
   );

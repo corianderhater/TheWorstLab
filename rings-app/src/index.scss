@@ -97,6 +97,7 @@ nav {
 
 .modal.item {
   width: 24rem;
+  margin: 3rem;
 }
 
 
@@ -110,7 +111,6 @@ nav {
   // overflow-y: auto;
   width: 60%;
   flex-grow: 2;
-
 }
 
 .modal-text {}
@@ -119,11 +119,24 @@ nav {
 
 .modal-short-desc {}
 
+.read-or-hide {
+  align-items: center;
+  justify-content: center;
+}
+
 .modal-end-buttons {
   border: 3px solid rgb(7, 155, 219);
   flex-grow: 1;
   justify-content: center;
 
+}
+
+.modal-collapsible {
+  max-height: 10rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .link {
@@ -150,17 +163,31 @@ nav {
   }
 }
 
-.cContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem;
-  padding-left: 20%;
-  padding-right: 20%;
+.gallery {
+ position: absolute;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  //max-height: 25vh;
+  width: 100%;
+  bottom: 1rem;
+  animation: fade-in 0.5s ease forwards;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(5px);
+}
 
+img {
+  display: block;
+  padding: 1rem;
+  width: 80vw;
+  align-items: center;
+    margin-left: auto;
+      margin-right: auto;
 }
 
 .card {
-
   background-color: #9baacf;
 }
 

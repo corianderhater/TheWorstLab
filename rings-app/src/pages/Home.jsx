@@ -14,6 +14,7 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { ModelCard } from "../Components/ModelCard";
 import data from "../modelsData.json";
 import * as THREE from "three";
+import { CollipsableText } from "../Components/CollapsibleText";
 
 export function Home() {
   const scaleAll = 0.7;
@@ -48,9 +49,9 @@ export function Home() {
       {isOpen && (
         <div className="modal">
           <div className="modal-item modal-close">
-            <button onClick={() => setIsOpen(false)}>close</button>
+            <button onClick={() => setIsOpen(false)}>&#10006;</button>
           </div>
-          <div className="modal-item modal-content">
+          <div className="modal-item">
             <div>
               <h1 className="modal-title">{selectedRing.name}</h1>
               <p className="modal-short-desc">
@@ -58,8 +59,10 @@ export function Home() {
               </p>
             </div>
           </div>
-          <div className="modal-item modal-end-buttons">
-            <button>Story behind</button>
+          <div className="modal-item">
+            <CollipsableText text={selectedRing.description} />
+          </div>
+          <div className="modal-item">
             <button>Buy</button>
           </div>
         </div>
