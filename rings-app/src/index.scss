@@ -174,29 +174,7 @@ nav {
   }
 }
 
-.gallery {
- position: absolute;
-  display: flex;
-  flex-direction: column;
-  //justify-content: center;
-  align-items: center;
-  //max-height: 25vh;
-  width: 100%;
-  bottom: 1rem;
-  animation: fade-in 0.5s ease forwards;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(5px);
-}
 
-img {
-  display: block;
-  padding: 1rem;
-  width: 80vw;
-  align-items: center;
-    margin-left: auto;
-      margin-right: auto;
-}
 
 .card {
   background-color: #9baacf;
@@ -215,4 +193,39 @@ img {
   padding: 2rem;
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(15px);
+}
+
+
+//=====================GALLERY====================
+
+.gallery {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  //max-height: 25vh;
+  width: 100%;
+  bottom: 1rem;
+  animation: fade-in 0.5s ease forwards;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(5px);
+}
+
+img {
+  display: block;
+  padding: 1rem;
+  width: 80vw;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid rgb(7, 155, 219);
+}
+
+.gallery-container {
+  overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 2;
+    border: 3px solid rgb(134, 7, 219);
 }

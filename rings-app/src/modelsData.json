@@ -5,6 +5,7 @@
         "name": "Szerszen",
         "fullName": "Boid2",
         "url":"/3d/szerszen.glb",
+        "image-url": "/images/szerszen/Szerszen_Filip.JPG",
         "shortDescription":"Short description will appear here",
         "description":"Neptune is the eighth planet from the Sun and the farthest known solar planet. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, and slightly more massive than its near-twin Uranus. Neptune is denser and physically smaller than Uranus because its greater mass causes more gravitational compression of its atmosphere. It is referred to as one of the solar system's two ice giant planets (the other one being Uranus). Being composed primarily of gases and liquids, it has no well-defined. The planet orbits the Sun once every 164.8 years at an average distance of 30.1 AU (4.5 billion km; 2.8 billion mi). It is named after the Roman god of the sea and has the astronomical symbol ♆, representing Neptune's trident.[d] ",
         "cost": 230
@@ -14,6 +15,7 @@
         "name": "Boid",
         "fullName": "Boid1",
         "url": "/3d/b3.glb",
+        "image-url": "/images/boids/boids1.jpg",
         "shortDescription":"Short description will appear here",
         "description":"Neptune is the eighth planet from the Sun and the farthest known solar planet. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, and slightly more massive than its near-twin Uranus. Neptune is denser and physically smaller than Uranus because its greater mass causes more gravitational compression of its atmosphere. It is referred to as one of the solar system's two ice giant planets (the other one being Uranus). Being composed primarily of gases and liquids, it has no well-defined. The planet orbits the Sun once every 164.8 years at an average distance of 30.1 AU (4.5 billion km; 2.8 billion mi). It is named after the Roman god of the sea and has the astronomical symbol ♆, representing Neptune's trident.[d] ",
         "cost": 230
@@ -23,6 +25,7 @@
         "name": "RandomMess",
         "fullName": "SimplexNoise",
         "url": "/3d/noise.glb",
+        "image-url": "/images/noise/noise5.jpg",
         "shortDescription":"Short description will appear here",
         "description":"Neptune is the eighth planet from the Sun and the farthest known solar planet.",
         "cost": 130

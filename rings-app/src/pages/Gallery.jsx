@@ -1,9 +1,12 @@
 import { Image } from "../Components/Image";
+import data from "../modelsData.json";
 
 export function Gallery() {
   return (
-    <>
-      <Image url={process.env.PUBLIC_URL + "/images/Szerszen_Filip.JPG"} />
-    </>
+    <div className="gallery-container">
+      {data.map((modelData, index) => {
+        return <Image url={modelData["image-url"]} />;
+      })}
+    </div>
   );
 }
