@@ -95,6 +95,7 @@ nav {
   }
 }
 
+//===============================Description==================
 .modal.item {
   width: 24rem;
   margin: 3rem;
@@ -137,6 +138,16 @@ nav {
   scroll-behavior: smooth;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.closeButton {
+  background-color: transparent;
+  border-width: 0px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform .5s ease-in-out;
+  &:hover {
+      transform: rotate(360deg);
+    }
 }
 
 .link {

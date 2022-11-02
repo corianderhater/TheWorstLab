@@ -49,7 +49,9 @@ export function Home() {
       {isOpen && (
         <div className="modal">
           <div className="modal-item modal-close">
-            <button onClick={() => setIsOpen(false)}>&#10006;</button>
+            <button className="closeButton" onClick={() => setIsOpen(false)}>
+              &#10006;
+            </button>
           </div>
           <div className="modal-item">
             <div>
