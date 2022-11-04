@@ -1,6 +1,9 @@
 html,
 body,
 #root {
+  font-family: 'Lato'; 
+  font-weight: normal; 
+  font-style: normal;
   width: 100%;
   height: 100%;
   background-color: #232121;
@@ -31,6 +34,7 @@ header {
   z-index: 1;
 }
 
+//======================NAVBAR=============================
 
 nav {
   background: transparent;
@@ -74,6 +78,17 @@ nav {
 }
 
 
+
+
+
+
+
+
+
+
+
+//===============================MODAL===============================
+
 .modal {
   position: absolute;
   display: flex;
@@ -95,8 +110,8 @@ nav {
   }
 }
 
-//===============================Description==================
 .modal.item {
+  
   width: 24rem;
   margin: 3rem;
 }
@@ -110,11 +125,14 @@ nav {
 
 .modal-content {
   // overflow-y: auto;
+  
   width: 60%;
   flex-grow: 2;
 }
 
-.modal-text {}
+.model-long-text {
+  animation: fade-in 0.5s ease forwards;
+}
 
 .modal-title {}
 
@@ -133,6 +151,7 @@ nav {
 }
 
 .modal-collapsible {
+  font-weight: 400;
   max-height: 10rem;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -155,10 +174,12 @@ nav {
 }
 
 .modal-content {
+  
   padding: 0 2rem;
 }
 
 .modal-title {
+  font-weight: 900;
   padding: 0rem 2rem;
 }
 
@@ -196,36 +217,118 @@ nav {
 }
 
 
-//=====================GALLERY====================
+//================================GALLERY================================
 
-.gallery {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  //justify-content: center;
-  align-items: center;
-  //max-height: 25vh;
-  width: 100%;
-  bottom: 1rem;
-  animation: fade-in 0.5s ease forwards;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(5px);
+.gallery-container {
+  height: 85%;
+  width: min(1500px, 100%, 100vw);
+  margin: auto;
+  margin-top: 3rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  border: 1rem solid rgba(0, 0, 0, 0.427);
 }
 
-img {
-  display: block;
-  padding: 1rem;
-  width: 80vw;
-  align-items: center;
+.gallery-container img {
+  display: flex;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   border: 3px solid rgb(7, 155, 219);
+  
 }
 
-.gallery-container {
-  overflow-y: scroll;
-    scroll-behavior: smooth;
-    padding: 2;
-    border: 3px solid rgb(134, 7, 219);
+
+
+//================================FONTS================================
+
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/lato/Lato-LightItalic.woff2') format('woff2'),
+    url('./fonts/lato/Lato-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/lato/Lato-BoldItalic.woff2') format('woff2'),
+    url('./fonts/lato/Lato-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/lato/Lato-Bold.woff2') format('woff2'),
+    url('./fonts/lato/Lato-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/lato/Lato-Italic.woff2') format('woff2'),
+    url('./fonts/lato/Lato-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url('./fonts/lato/Lato-Hairline.woff2') format('woff2'),
+    url('./fonts/lato/Lato-Hairline.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/lato/Lato-Light.woff2') format('woff2'),
+    url('./fonts/lato/Lato-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url('./fonts/lato/Lato-HairlineItalic.woff2') format('woff2'),
+    url('./fonts/lato/Lato-HairlineItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/lato/Lato-Regular.woff2') format('woff2'),
+    url('./fonts/lato/Lato-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/lato/Lato-Black.woff2') format('woff2'),
+    url('./fonts/lato/Lato-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/lato/Lato-BlackItalic.woff2') format('woff2'),
+    url('./fonts/lato/Lato-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
 }

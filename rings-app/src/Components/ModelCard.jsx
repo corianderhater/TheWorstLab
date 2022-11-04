@@ -61,7 +61,8 @@ export function ModelCard({
   function handleClick() {
     onClick();
   }
-  // debugger
+
+  // rotation
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     ref.current.rotation.z = (Math.PI * t) / 40;
