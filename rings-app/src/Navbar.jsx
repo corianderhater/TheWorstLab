@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav>
       <div className="navbar-item">
         <Link className="link" to="/">
-          <button className="button">Collection</button>
+          <button className="button">Collections</button>
         </Link>
       </div>
 
@@ -19,7 +19,13 @@ const Navbar = () => {
 
       <div className="navbar-item">
         <Link className="link" to="/collections">
-          <button className="button">Contact.me!</button>
+          <button className="button">How to order</button>
+        </Link>
+      </div>
+
+      <div className="navbar-item">
+        <Link className="link" to="/collections">
+          <button className="button">Who am I</button>
         </Link>
       </div>
     </nav>

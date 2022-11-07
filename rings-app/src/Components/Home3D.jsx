@@ -8,7 +8,6 @@ import {
   EffectComposer,
   BrightnessContrast,
 } from "@react-three/postprocessing";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { ModelCard } from "../Components/ModelCard";
 import data from "../modelsData.json";
 
@@ -16,7 +15,6 @@ export default function Home3D({
   isOpen,
   selectedRing,
   handleClick,
-  setIsDragging,
   scaleAll,
 }) {
   const isHorizontal = window.innerWidth > window.innerHeight ? true : false;
@@ -48,29 +46,23 @@ export default function Home3D({
 
       <OrbitControls
         target={[0, 0, 0]}
-        // maxPolarAngle={Math.PI * 0.5}
-        // minPolarAngle={Math.PI * 0.5}
         minPolarAngle={Math.PI * 0.5}
         maxPolarAngle={Math.PI * 0.5}
-        enableRotate={true}
+        enableRotate={false}
         enablePan={true}
         enableZoom={true}
       />
 
-      {/* models */}
       {data.map((modelData, index) => {
         return (
-          //   <Float speed={4} rotationIntensity={4} floatIntensity={10}>
           <ModelCard
             key={index}
             modelData={modelData}
             isOpen={isOpen && index === selectedRing.index}
             onClick={() => handleClick(index)}
-            setIsDragging={setIsDragging}
-            position={calculatePosition(index)}
-            scale={scaleAll}
+            positionStart={calculatePosition(index)}
+            scaleStart={scaleAll}
           />
-          //   </Float>
         );
       })}
 

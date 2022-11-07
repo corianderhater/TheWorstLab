@@ -58,13 +58,16 @@ export function Home() {
             />
           </div>
           <div className="modal-item">
+            <button>Photo Gallery</button>
+          </div>
+          <div className="modal-item">
             <button>Buy</button>
           </div>
         </div>
       )}
 
       <Canvas>
-        {/* <Gradient height={120} /> */}
+        <Gradient height={120} />
         <Suspense fallback={null}>
           <Home3D
             isOpen={isOpen}

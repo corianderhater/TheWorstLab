@@ -84,15 +84,17 @@ float snoise(vec3 v){
 void main() {
   
   vUv = uv;
-  vec2 noiseCoord = uv*vec2(200.2, 300.5);
+  vec2 noiseCoord = uv*vec2(2.2, 3.5);
   float incline = uv.x *0.9;
   float offset = incline*mix(-.25,0.25,uv.y);
-  float noise = snoise(vec3(noiseCoord.x , noiseCoord.y, 0.2 * time));
+  float noisee = snoise(vec3(noiseCoord.x, noiseCoord.y, -time * 0.2));
+  float noiseee = snoise(vec3(noiseCoord.x, noiseCoord.y, time * 0.1));
+  float noise = snoise(vec3( noisee , sin(noiseee * noiseCoord.y), 0.3 * time));
   vec3 pos = vec3(position.x, position.y, 0.3 *  noise);
   vec4 result;
-  float range = .02;
+  float range = .5;
   //vColor = vec3(0,pos.z,pos.z);
-  vColor = mix(vec3(0.,0.,.0), vec3(range ,range * 3.2,range* 3.), noise);
+  vColor = mix(vec3(0,0,0), vec3(range ,0.45* range ,range* 1.), noise);
 
   gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0);  
 }

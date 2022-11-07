@@ -5,81 +5,62 @@ import { useDrag } from "@use-gesture/react";
 import ModelDescription from "./ModelDescription";
 import "../index.scss";
 import * as THREE from "three";
-import { animated, useSpring } from "@react-spring/three";
+import { animated, useSpring, config } from "@react-spring/three";
 import { NotEqualStencilFunc, SphereGeometry } from "three";
 
 export function ModelCard({
   modelData,
-  setIsDragging,
-  floorPlane,
-  position,
+  positionStart,
   isOpen,
-  scale,
+  scaleStart,
   onClick,
 }) {
-  const { nodes } = useGLTF(import.meta.env.BASE_URL  + modelData.url);
+  const { nodes } = useGLTF(import.meta.env.BASE_URL + modelData.url);
+  const ringGeometry = nodes.mesh_0.geometry;
   const ref = useRef();
+  const bbox = useRef();
   const [hovered, hover] = useState(false);
-  var hitMat = new THREE.MeshBasicMaterial({ visible: false });
-  let planeIntersectPoint = new THREE.Vector3();
-  //const { scale } = useSpring({ scale: active ? 1.5 : 1 });
-
-  //dragging
-
-  const [pos, setPos] = useState([0, 1, 0]);
   const { size, viewport } = useThree();
-  const aspect = size.width / viewport.width;
+  const aspect = 6 * (size.width / viewport.width);
+  var hitMat = new THREE.MeshBasicMaterial({ visible: false });
 
-  const [spring, api] = useSpring(() => ({
-    //position: [0, 0, 0],
-    position: pos,
-    scale: 1,
-    rotation: [0, 0, 0],
-    config: { friction: 10 },
-  }));
+  //=============================MOVE===========================================
 
-  const bind = useDrag(
-    ({ active, movement: [x, y], timeStamp, event }) => {
-      if (active) {
-        event.ray.intersectPlane(floorPlane, planeIntersectPoint);
-        setPos([planeIntersectPoint.x, 1.5, planeIntersectPoint.z]);
-      }
-
-      setIsDragging(active);
-
-      api.start({
-        // position: active ? [x / aspect, -y / aspect, 0] : [0, 0, 0],
-        position: pos,
-        scale: active ? 1.2 : 1,
-        rotation: [y / aspect, x / aspect, 0],
-      });
-      return timeStamp;
-    },
-    { delay: true }
-  );
+  const { position } = useSpring({
+    position: isOpen ? [-60, 5, 0] : positionStart,
+    config: config.molasses,
+  });
 
   function handleClick() {
     onClick();
   }
 
-  // rotation
+  //=============================DRAG===========================================
+  const [spring, set] = useSpring(() => ({
+    rotation: [0, 0, 0],
+    config: { mass: 1, friction: 40, tension: 800 },
+  }));
+  const bind = useDrag(({ movement: [x, y], down }) =>
+    set({
+      config: config.default,
+      rotation: down ? [0, x / aspect, y / aspect] : [0, 0, 0],
+    })
+  );
+
+  //=============================ROTATE======================================
+
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     ref.current.rotation.z = (Math.PI * t) / 40;
     ref.current.rotation.y = Math.sin(t / 5);
   });
 
-  const ringGeometry = nodes.mesh_0.geometry;
-
   return (
     <>
-      <animated.mesh {...spring} {...bind()} castShadow>
-        <group
-          position={isOpen ? [-60, 5, 0] : position}
-          scale={scale}
-          dispose={null}
-        >
+      <animated.mesh position={position} {...spring} {...bind()}>
+        <group scale={scaleStart} dispose={null}>
           <mesh
+            ref={bbox}
             geometry={
               new SphereGeometry(ringGeometry.boundingSphere.radius, 5, 5)
             }
