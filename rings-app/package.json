@@ -13,6 +13,7 @@
     "@use-gesture/react": "^10.2.20",
     "@vitejs/plugin-react": "^2.2.0",
     "gsap": "^3.11.3",
+    "nice-color-palettes": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2",
