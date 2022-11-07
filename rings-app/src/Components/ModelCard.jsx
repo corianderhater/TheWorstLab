@@ -17,7 +17,7 @@ export function ModelCard({
   scale,
   onClick,
 }) {
-  const { nodes } = useGLTF(process.env.PUBLIC_URL + modelData.url);
+  const { nodes } = useGLTF(import.meta.env.BASE_URL  + modelData.url);
   const ref = useRef();
   const [hovered, hover] = useState(false);
   var hitMat = new THREE.MeshBasicMaterial({ visible: false });

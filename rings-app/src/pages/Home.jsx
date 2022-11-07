@@ -1,3 +1,4 @@
+import React from "react";
 import {
   OrbitControls,
   PerspectiveCamera,
@@ -16,8 +17,8 @@ import { ModelCard } from "../Components/ModelCard";
 import data from "../modelsData.json";
 import * as THREE from "three";
 import { CollipsableText } from "../Components/CollapsibleText";
-import fragment from "../shader/fragment.glsl";
-import vertex from "../shader/vertex.glsl";
+import fragment from "../shader/fragment.glsl?raw";
+import vertex from "../shader/vertex.glsl?raw";
 import gsap from "gsap";
 
 export function Home() {
@@ -107,10 +108,7 @@ function CanvasContent({
             files={process.env.PUBLIC_URL + "textures/gradientHDRI.hdr"}
           /> */}
       {/* <Environment background={true} files={process.env.PUBLIC_URL + "textures/gradientHDRI.hdr"}/> */}
-      <Environment
-        background={false}
-        files={process.env.PUBLIC_URL + "textures/neon.hdr"}
-      />
+      <Environment background={false} files={import.meta.env.BASE_URL + "textures/neon.hdr"} />
       <ambientLight intensity={0.5} />
 
       <PerspectiveCamera makeDefault fov={50} position={[-100, 0, 0]} />
@@ -200,18 +198,8 @@ function BgNoise() {
     uniforms: {
       u_time: { type: "f", value: 0 },
     },
-    vertexShader: v,
-    fragmentShader: `
-    uniform float time;
-    varying vec2 vUv;
-    varying vec3 vPosition;
-    varying vec3 vColor;
-    uniform vec2 pixels;
-
-    void main() {
-      gl_FragColor = vec4( 1.0, 0.0, 0.0, 0.0);
-    }
-  `,
+    vertexShader: vertex,
+    fragmentShader: fragment,
   });
 
   return (
