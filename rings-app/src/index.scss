@@ -19,6 +19,7 @@ body,
   --greyLight-3: #00000090;
   --greyDark: #9baacf;
   --purple: purple;
+  --hovered: #9baacf;
 
 }
 
@@ -111,7 +112,6 @@ nav {
   background: rgba(0, 0, 0, 0.616);
   backdrop-filter: blur(5px);
   color: rgba(255, 255, 255, 0.75);
-  font-smooth: auto;
 }
 
 @media only screen and (orientation: landscape) {
@@ -146,6 +146,10 @@ nav {
   background-color: rgb(3, 3, 3);
   border: 1px solid rgb(255, 255, 255);
   color: white;
+  &:hover {
+      color: var(--hovered);
+      border: 1px solid var(--hovered);
+    }
 
 }
 

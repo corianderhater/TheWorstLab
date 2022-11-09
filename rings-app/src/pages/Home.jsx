@@ -59,8 +59,6 @@ export function Home() {
           </div>
           <div className="modal-item">
             <button className="button-modal">Photo Gallery</button>
-          </div>
-          <div className="modal-item">
             <button className="button-modal">Buy</button>
           </div>
         </div>
