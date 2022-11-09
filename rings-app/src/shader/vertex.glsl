@@ -94,7 +94,7 @@ void main() {
   vec4 result;
   float range = .5;
   //vColor = vec3(0,pos.z,pos.z);
-  vColor = mix(vec3(0,0,0), vec3(range ,0.45* range ,range* 1.), noise);
+  vColor = mix(vec3(0,0,0), vec3(range ,0.2* range ,range* 1.), noise);
 
   gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0);  
 }

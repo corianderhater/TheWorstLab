@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
 export default function Gradient({ height }) {
-  const scale = 5;
+  const scale = 1;
   const width = (window.innerWidth / window.innerHeight) * height;
   const refMat = useRef();
 
@@ -28,10 +28,12 @@ export default function Gradient({ height }) {
 
   return (
     <mesh
-      position={[0, -30, 0]}
+      position={[60, -30, 0]}
       rotation={[Math.PI / 2, 0, 0]}
       scale={[scale, scale, scale]}
     >
+      {/* <sphereBufferGeometry attach="geometry" args={[30, 16, 16]} /> */}
+      {/* <sphereGeometry args={[100, 16, 16]} /> */}
       <planeBufferGeometry
         attach="geometry"
         args={[width / scale, height / scale, width, height]}

@@ -4,8 +4,8 @@ import "./index.scss";
 const Header = () => {
   return (
     <header>
-      <div>Mass</div>
-      <div>Mess</div>
+      <div>Piggy</div>
+      <div>Krout</div>
     </header>
   );
 };

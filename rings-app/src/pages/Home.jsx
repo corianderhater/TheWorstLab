@@ -39,7 +39,7 @@ export function Home() {
       {isOpen && (
         <div className="modal">
           <div className="modal-item modal-close">
-            <button className="closeButton" onClick={() => setIsOpen(false)}>
+            <button className="button-close" onClick={() => setIsOpen(false)}>
               &#10006;
             </button>
           </div>
@@ -58,16 +58,16 @@ export function Home() {
             />
           </div>
           <div className="modal-item">
-            <button>Photo Gallery</button>
+            <button className="button-modal">Photo Gallery</button>
           </div>
           <div className="modal-item">
-            <button>Buy</button>
+            <button className="button-modal">Buy</button>
           </div>
         </div>
       )}
 
       <Canvas>
-        <Gradient height={120} />
+        <Gradient height={300} />
         <Suspense fallback={null}>
           <Home3D
             isOpen={isOpen}

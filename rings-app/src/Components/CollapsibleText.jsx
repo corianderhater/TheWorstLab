@@ -9,8 +9,11 @@ export function CollipsableText({ text }) {
   return (
     <p className="modal-collapsible">
       {isReadMore ? "" : text}
-      <button onClick={toggleReadMore} className="read-or-hide">
-        {isReadMore ? "...read more" : " show less"}
+      <button
+        onClick={toggleReadMore}
+        className="button-modal button-long-description"
+      >
+        {isReadMore ? "long description" : "close"}
       </button>
     </p>
   );
