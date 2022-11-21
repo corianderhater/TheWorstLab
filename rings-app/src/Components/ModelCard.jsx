@@ -2,11 +2,10 @@ import React, { useRef, useState } from "react";
 import { useGLTF, Html, Sphere, MeshWobbleMaterial } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useDrag } from "@use-gesture/react";
-import ModelDescription from "./ModelDescription";
 import "../index.scss";
 import * as THREE from "three";
 import { animated, useSpring, config } from "@react-spring/three";
-import { NotEqualStencilFunc, SphereGeometry } from "three";
+import { SphereGeometry } from "three";
 
 export function ModelCard({
   modelData,
@@ -15,6 +14,7 @@ export function ModelCard({
   scaleStart,
   onClick,
 }) {
+  //=============================CONST===========================================
   const { nodes } = useGLTF(import.meta.env.BASE_URL + modelData.url);
   const ringGeometry = nodes.mesh_0.geometry;
   const ref = useRef();
@@ -25,15 +25,14 @@ export function ModelCard({
   var hitMat = new THREE.MeshBasicMaterial({ visible: false });
 
   //=============================MOVE===========================================
-
-  const { position } = useSpring({
-    position: isOpen ? [-60, 5, 0] : positionStart,
-    config: config.molasses,
-  });
-
   function handleClick() {
     onClick();
   }
+
+  const { position } = useSpring({
+    position: isOpen ? [-40, 10, 0] : positionStart,
+    config: config.molasses,
+  });
 
   //=============================DRAG===========================================
   const [spring, set] = useSpring(() => ({
@@ -48,7 +47,6 @@ export function ModelCard({
   );
 
   //=============================ROTATE======================================
-
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     ref.current.rotation.z = (Math.PI * t) / 40;

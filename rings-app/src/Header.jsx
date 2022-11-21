@@ -4,8 +4,8 @@ import "./index.scss";
 const Header = () => {
   return (
     <header>
-      <div>Piggy</div>
-      <div>Krout</div>
+      <a className="header-text-big">MassMess x YLC</a>
+      <a className="header-text-small"> The Studio of Generative Jewelry</a>
     </header>
   );
 };

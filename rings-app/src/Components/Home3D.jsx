@@ -29,7 +29,9 @@ export default function Home3D({
 
     return [
       0,
-      isHorizontal ? 0 : spanVer * index - spanVer + spanVer / 5,
+      isHorizontal
+        ? 0
+        : spanVer * index - spanVer + spanVer / (data.length * 2 - 1),
       isHorizontal ? spanHor * index - spanHor : 0,
     ];
   }

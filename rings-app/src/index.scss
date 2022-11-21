@@ -34,13 +34,28 @@ header {
   position: fixed;
   width: max-content;
   display: block;
-  left: 1rem;
+  left: 0.5rem;
+  top: 0.5rem;
   z-index: 1;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   
+}
+
+.header-text-big {
+  font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.header-text-small {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.6rem;
 }
 
 //======================NAVBAR=============================
@@ -53,7 +68,10 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  gap: minmax(auto, 0.3rem);
+  width: min(400px, 80%);
+  justify-content: space-evenly;
+  gap: minmax(auto, 0.5rem);
+      // border: 1px solid rgb(7, 49, 219);
 }
 
 
@@ -62,6 +80,8 @@ nav {
   padding: 0.9rem;
   display: flex;
   align-items: center;
+
+
 }
 
 
@@ -74,10 +94,12 @@ nav {
   display: flex;
   height: .3rem;
   font-size: .7rem;
-
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 0.9rem;
 
   &:active {
-    color: rgb(63, 227, 13);
+    color: rgb(160, 102, 169);
   }
 
   &:hover {
@@ -88,48 +110,64 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
 //===============================MODAL===============================
 
 .modal {
   position: absolute;
   display: flex;
   flex-direction: column;
-  //justify-content: center;
+  // justify-content: center;
   align-items: center;
   //max-height: 25vh;
   width: 100%;
+  max-height: 100%;
   bottom: 0rem;
   animation: fade-in 0.5s ease forwards;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.616);
-  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10rem);
   color: rgba(255, 255, 255, 0.75);
+  // border: 3px solid rgb(7, 219, 99);
+  box-sizing: border-box;
 }
 
-@media only screen and (orientation: landscape) {
-  .modal {
-    flex-direction: row;
-  }
+// @media only screen and (orientation: landscape) {
+//   .modal {
+//     flex-direction: row;
+//   }
+// }
+
+.modal-item {
+  text-align: left;
+  width: min(800px, 80%, 100vw);
+  // margin: 0.2rem;
+  // border: 3px solid rgb(7, 219, 99);
+  box-sizing: border-box;
 }
 
-.modal.item {
-  
-  width: 24rem;
-  margin: 3rem;
+.modal-collapsible {
+  height: min(800px, 60%, 60vw);
+}
+
+.inside-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  // width: 100%;
+}
+
+.inside-flex-item {
+  text-align: center;
+  justify-content: space-evenly;
+  width: max(50px, 30%);
+  // border: 1px solid rgb(7, 49, 219);
+  box-sizing: border-box;
 }
 
 .modal-content {
   // overflow-y: auto;
   border: 3px solid rgb(7, 219, 99);
-  width: 60%;
+  // width: 60%;
 
 }
 
@@ -139,7 +177,9 @@ nav {
 
 .modal-title {}
 
-.modal-short-desc {}
+.modal-short-text {
+
+}
 .button-modal {
   font-family: "Lato";
   font-size: 0.8rem;
@@ -170,8 +210,8 @@ nav {
   max-height: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: auto;
+  padding-right: auto;
 }
 .button-close {
   color: white;
@@ -189,14 +229,8 @@ nav {
   text-decoration: none;
 }
 
-.modal-content {
-  
-  padding: 0 2rem;
-}
-
 .modal-title {
   font-weight: 900;
-  padding: 0rem 2rem;
 }
 
 @keyframes fade-in {
@@ -220,48 +254,42 @@ nav {
 .card-container {
   width: 80%;
   background: rgba(255, 0, 0, 0.375);
-  border: 2px solid rgba(0, 230, 11, 0.433);
+  // border: 2px solid rgba(0, 230, 11, 0.433);
 }
 
 .card-description {
   margin-top: 25%;
-  border: 2px solid rgba(189, 186, 186, 0.433);
+  // border: 2px solid rgba(189, 186, 186, 0.433);
   display: block;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10rem);
 }
 
 
 //================================GALLERY================================
 
 .gallery-container {
-  height: 85%;
-  width: min(800px, 80%, 100vw);
   margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
+  width: 100%;
+  // margin-top: 1rem;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  //border: 1rem solid rgba(0, 0, 0, 0.427);
+  // border: 3px solid rgb(171, 40, 210);
 }
 
 .gallery-container img {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   display: flex;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  //border: 3px solid rgb(7, 155, 219);
+  // border: 3px solid rgb(7, 155, 219);
+  box-sizing: border-box;
   
 }
 
-.gallery-container text {
-  font-size: .7rem;
+.gallery-container p {
+  font-size: .5rem;
   font-weight: 100;
 }
 

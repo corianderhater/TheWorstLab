@@ -1,10 +1,12 @@
+import React from "react";
+import { Image } from "./Image";
 import "../index.scss";
 
 function ModelDescription({ modelData }) {
   return (
     <>
-      <div className="card-description">
-        <div className="card-title"> {modelData.name} </div>
+      <div className="gallery-container">
+        <Image url={modelData["image-url"]} />;
         <div className="card-text"> {modelData.description} </div>
       </div>
     </>

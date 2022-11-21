@@ -11,21 +11,21 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="navbar-item">
+      {/* <div className="navbar-item">
         <Link className="link" to="/gallery">
           <button className="button">Gallery</button>
         </Link>
-      </div>
+      </div> */}
 
       <div className="navbar-item">
         <Link className="link" to="/collections">
-          <button className="button">How to order</button>
+          <button className="button">Tips</button>
         </Link>
       </div>
 
       <div className="navbar-item">
         <Link className="link" to="/collections">
-          <button className="button">Who am I</button>
+          <button className="button">Why?</button>
         </Link>
       </div>
     </nav>
