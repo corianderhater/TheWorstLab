@@ -46,8 +46,8 @@ header {
 
 .header-text-big {
   font-family: 'Lato';
-    font-style: normal;
-    font-weight: 300;
+    font-style: bold;
+    font-weight: 600;
     font-size: 1rem;
 }
 
@@ -58,13 +58,46 @@ header {
   font-size: 0.6rem;
 }
 
+//======================FOOTER=============================
+
+footer {
+  background: transparent;
+  background-color: transparent;
+  color: rgb(69, 69, 69);
+  position: fixed;
+  width: max-content;
+  display: block;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  z-index: 100;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.6rem;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.footer-text-big {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.footer-text-small {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.6rem;
+}
 //======================NAVBAR=============================
 
 nav {
   background: transparent;
   position: fixed;
   display: flex;
-  bottom: 0.5rem;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
@@ -108,7 +141,7 @@ nav {
 //==============================GUIDE==============================
 
 .guide-container{
-  // border: 1px solid rgb(7, 49, 219);
+  // border: 1px solid rgb(152, 7, 219);
   background: rgba(0, 0, 0, 0.01);
   backdrop-filter: blur(100px);
   position: fixed;
@@ -122,13 +155,21 @@ nav {
   justify-content: center;
   align-items: center;
   animation: fade-in 0.5s ease-in-out forwards;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.guide-canvas{
+  // margin-top: 2rem;
+  // margin-bottom: 3rem;
+  border: 3px solid rgb(255, 0, 132);
 }
 
 .guide-item {
   text-align: left;
-  width: min(800px, 80%, 100vw);
+  width: min(800px, 85%, 100vw);
   // margin: 0.2rem;
-  border: 3px solid rgb(7, 219, 99);
+  // border: 3px solid rgb(7, 219, 99);
   box-sizing: border-box;
 }
 
