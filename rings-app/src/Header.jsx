@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <a className="header-text-big">MassMess x YLC</a>
-      <a className="header-text-small"> The Studio of Generative Jewelry</a>
+      <a className="header-text-small">The Other Jewelry</a>
     </header>
   );
 };
