@@ -1,13 +1,18 @@
 import React from "react";
 import "./index.scss";
 import { Link } from "react-router-dom";
-import GuideContent from "./Components/GuideContent";
+import Guide from "./pages/Guide";
+import About from "./pages/About";
 import { useState } from "react";
 
 export function Navbar() {
   const [page, setPage] = useState(null);
   function setGuide() {
-    setPage(<GuideContent />);
+    setPage(<Guide />);
+  }
+
+  function setAbout() {
+    setPage(<About />);
   }
 
   function setClean() {
@@ -26,13 +31,12 @@ export function Navbar() {
           <button onClick={setGuide} className="button">
             Guide
           </button>
-          {/* <Guide /> */}
         </div>
 
         <div className="navbar-item">
-          <Link className="link" to="/collections">
-            <button className="button">About</button>
-          </Link>
+          <button onClick={setAbout} className="button">
+            About
+          </button>
         </div>
       </nav>
       <div>{page}</div>

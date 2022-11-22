@@ -11,9 +11,7 @@ export function CollipsableText({ modelData }) {
     <p>
       {isReadMore ? "" : ModelDescription({ modelData })}
       <button onClick={toggleReadMore} className="button-modal">
-        {isReadMore
-          ? "the story behind this ring"
-          : "close the story behind the ring"}
+        {isReadMore ? "see photos" : "close photos"}
       </button>
     </p>
   );

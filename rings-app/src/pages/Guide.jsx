@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.scss";
 
-function GuideContent() {
+function Guide() {
   return (
     <>
       <div className="guide-container">
@@ -14,17 +14,25 @@ function GuideContent() {
           </h5>
         </div>
         <div className="guide-item guide-scroll">
-          <h3>How to order</h3>
+          <h3>How do I order?</h3>
           <p>
             Select “Rings” tab from the bottom menu. Select the size and contact
             me via Instagram, telephone number or WhatsApp.
           </p>
-          <h3>What is the production waiting time?</h3>
+          <h3>What is my ring size?</h3>
+          <p>
+            The easiest is to go to the closest to you jewelry shop and ask to
+            meassure the finger you would like to order the ring for. It is
+            crucial to order a ring of your size because complex geometry of our
+            designs is hard to resize. Make sure about your size!
+          </p>
+          <h3>How long will I wait for my ring?</h3>
           <p>
             Right now we are in the pre-order phase. We will manufacture your
-            ring/s by the end of February. We can promise shipping before March
-            2023. It's worth the wait! And the reason for the waiting time is
-            that we have production vacations in January.
+            ring/s by the end of February 2023.
+            <em>We promise shipping before March 2023. </em>It's worth the wait!
+            And the reason for the waiting time is that we have production
+            vacations in January.
           </p>
           <h3>Shipping</h3>
           <p>
@@ -36,6 +44,13 @@ function GuideContent() {
               <li>Outside of Europe: under 30 days from shipping / Depends</li>
             </ul>
           </p>
+          <h3>Materials</h3>
+          <p>
+            All material used for jewellery is recycled. Silver. Right now we
+            use only Silver XXX. It's known for its shininess and durability.
+            Gold. Right now we produce rings out of yellow and white gold 14k
+            (585) because it is beautiful and robust.
+          </p>
           <h3>Guarantee</h3>
           <p>
             We will do our best to make you happy with the purchase. And of
@@ -45,14 +60,7 @@ function GuideContent() {
             advertised. If you bought a product or a service online or outside
             of a shop (by telephone, mail order, from a door-to-door
             salesperson), you also have the right to cancel and return your
-            order within 14 days, for any reason and without a justification.""
-          </p>
-          <h3>Materials</h3>
-          <p>
-            All material used for jewellery is recycled. Silver. Right now we
-            use only Silver XXX. It's known for its shininess and durability.
-            Gold. Right now we produce rings out of yellow and white gold 14k
-            (585) because it is beautiful and robust.
+            order within 14 days, for any reason and without a justification."
           </p>
         </div>
       </div>
@@ -60,4 +68,4 @@ function GuideContent() {
   );
 }
 
-export default GuideContent;
+export default Guide;

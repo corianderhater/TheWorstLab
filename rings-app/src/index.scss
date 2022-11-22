@@ -37,7 +37,7 @@ header {
   left: 0.5rem;
   top: 0.5rem;
   z-index: 100;
-  font-family: 'Lato';
+  // font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -45,17 +45,17 @@ header {
 }
 
 .header-text-big {
-  font-family: 'Lato';
-    font-style: bold;
-    font-weight: 600;
+  // font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
     font-size: 1rem;
 }
 
 .header-text-small {
-  font-family: 'Lato';
+  // font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 
 //======================FOOTER=============================
@@ -143,7 +143,7 @@ nav {
 .guide-container{
   // border: 1px solid rgb(152, 7, 219);
   background: rgba(0, 0, 0, 0.01);
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(200px);
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -159,6 +159,14 @@ nav {
   padding-bottom: 4rem;
 }
 
+.guide-container p{
+  padding-bottom: 2rem;
+  font-weight: 300;
+}
+
+.guide-container em{
+  color: pink;
+}
 .guide-canvas{
   // margin-top: 2rem;
   // margin-bottom: 3rem;

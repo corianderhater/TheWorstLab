@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <header>
         <a className="header-text-big">MassMess x YLC</a>
-        <a className="header-text-small"> Differnetly Informed Jewelry</a>
+        <a className="header-text-small"> Algorithmic Jewelry</a>
       </header>
       <footer>© 2022 MassMess</footer>
     </>
