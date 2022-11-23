@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <>
       <header>
-        <a className="header-text-big">MassMess x YLC</a>
-        <a className="header-text-small"> Algorithmic Jewelry</a>
+        <a className="header-text-big">LesDudes x Liquid Candy</a>
+        <a className="header-text-small"> Heuristic Jewelry</a>
       </header>
       <footer>© 2022 MassMess</footer>
     </>

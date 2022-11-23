@@ -63,7 +63,7 @@ header {
 footer {
   background: transparent;
   background-color: transparent;
-  color: rgb(69, 69, 69);
+  color: rgb(255, 255, 255);
   position: fixed;
   width: max-content;
   display: block;
@@ -160,12 +160,17 @@ nav {
 }
 
 .guide-container p{
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
   font-weight: 300;
+  // border: 1px solid rgb(152, 7, 219);
+}
+
+.guide-container title {
+  padding-bottom: 0.5rem;
 }
 
 .guide-container em{
-  color: pink;
+  color: rgb(21, 202, 157);
 }
 .guide-canvas{
   // margin-top: 2rem;
