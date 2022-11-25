@@ -16,8 +16,8 @@
         "name": "Soft Bond",
         "fullName": "Boid1",
         "url": "3d/b3.glb",
-        "image-url": "/images/boids/boids1.jpg",
-        "shortDescription":"Light gets lost in the complexity, giving this piece a different sort of glare.",
+        "image-url": "/images/boids/Boid_01_bw3.jpg",
+        "shortDescription":"Light gets lost in this complexity, giving a different sort of glare. Just like us.",
         "description":"",
         "cost": 230,
         "material": "silver"
@@ -27,9 +27,9 @@
         "name": "Random mess",
         "fullName": "SimplexNoise",
         "url": "3d/noise.glb",
-        "image-url": "/images/noise/noise5.jpg",
+        "image-url": "/images/noise/Noise_01_bw.jpg",
         "shortDescription":"So many noises around us. That is another one, simplex noise interpreted in 3d.",
-        "description":"Neptune is the eighth planet from the Sun and the farthest known solar planet.",
+        "description":"Model: Arrate",
         "cost": 130,
         "material": "silver"
     }

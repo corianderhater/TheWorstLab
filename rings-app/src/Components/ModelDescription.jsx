@@ -6,7 +6,7 @@ function ModelDescription({ modelData }) {
   return (
     <>
       <div className="gallery-container">
-        <Image url={modelData["image-url"]} />;
+        <Image url={modelData["image-url"]} />
         <div className="card-text"> {modelData.description} </div>
       </div>
     </>

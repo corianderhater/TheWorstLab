@@ -8,7 +8,7 @@ function Guide() {
         <div className="guide-item">
           <h1>Welcome to the shopping guide: </h1>
           <h5>
-            It is important for me to clear things out before order so you are
+            It is important for me to clear things out before order, so you are
             the best informed. And if you are not sure, please, don't hesitete
             to ask me directly.
           </h5>

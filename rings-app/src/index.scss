@@ -19,7 +19,7 @@ body,
   --greyLight-3: #00000090;
   --greyDark: #9baacf;
   --purple: purple;
-  --hovered: #9baacf;
+  --hovered: #393a3d;
 
 }
 
@@ -91,6 +91,7 @@ footer {
   font-weight: 300;
   font-size: 0.6rem;
 }
+
 //======================NAVBAR=============================
 
 nav {
@@ -104,7 +105,7 @@ nav {
   width: min(400px, 80%);
   justify-content: space-evenly;
   gap: minmax(auto, 0.5rem);
-      // border: 1px solid rgb(7, 49, 219);
+  // border: 1px solid rgb(7, 49, 219);
 }
 
 
@@ -209,6 +210,7 @@ nav {
   color: rgba(255, 255, 255, 0.75);
   // border: 3px solid rgb(7, 219, 99);
   box-sizing: border-box;
+  padding-bottom: 1rem;
 }
 
 // @media only screen and (orientation: landscape) {
@@ -263,13 +265,19 @@ nav {
 .button-modal {
   font-family: "Lato";
   font-size: 0.8rem;
-  background-color: rgb(3, 3, 3);
+  padding: 0.3rem .8rem 0.3rem 0.8rem;
+
+  background-color: transparent;
   border: 1px solid rgb(255, 255, 255);
   color: white;
   &:hover {
-      color: var(--hovered);
-      border: 1px solid var(--hovered);
-    }
+    color: var(--hovered);
+    border: 1px solid var(--hovered);
+  }
+  &:active {
+    color: rgb(50, 47, 47);
+    border: 1px solid var(--hovered);
+  }
 
 }
 

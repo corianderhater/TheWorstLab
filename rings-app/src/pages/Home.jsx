@@ -5,6 +5,7 @@ import data from "../modelsData.json";
 import { CollipsableText } from "../Components/CollapsibleText";
 import Home3D from "../Components/Home3D";
 import Gradient from "../Components/Gradient";
+import { Buy } from "./Buy";
 
 export function Home() {
   const [isDragging, setIsDragging] = useState(false);
@@ -31,7 +32,8 @@ export function Home() {
           </div>
           <div className="modal-item inside-flex">
             <div className="inside-flex-item">
-              <button className="button-modal">Buy</button>
+              <Buy modelData={selectedRing} />
+              <button className="button-modal">buy</button>
             </div>
             <div className="inside-flex-item">
               <button className="button-close" onClick={() => setIsOpen(false)}>
