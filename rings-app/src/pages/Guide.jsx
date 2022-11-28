@@ -53,14 +53,16 @@ function Guide() {
           </p>
           <h3>Guarantee</h3>
           <p>
-            We will do our best to make you happy with the purchase. And of
-            course we apply to EU Guarantee and returns law: "Under EU rules, a
-            trader must repair, replace, reduce the price or give you a refund
-            if goods you bought turn out to be faulty or do not look or work as
-            advertised. If you bought a product or a service online or outside
-            of a shop (by telephone, mail order, from a door-to-door
-            salesperson), you also have the right to cancel and return your
-            order within 14 days, for any reason and without a justification."
+            First of all, we will use all out powers to make you happy with your
+            choice. <br />
+            <br /> And of course we apply to EU Guarantee and returns law:
+            "Under EU rules, a trader must repair, replace, reduce the price or
+            give you a refund if goods you bought turn out to be faulty or do
+            not look or work as advertised. If you bought a product or a service
+            online or outside of a shop (by telephone, mail order, from a
+            door-to-door salesperson), you also have the right to cancel and
+            return your order within 14 days, for any reason and without a
+            justification."
           </p>
         </div>
       </div>

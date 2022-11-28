@@ -3,8 +3,8 @@ body,
 #root {
   
   font-family: sofia-pro, sans-serif;
-    font-style: normal;
-    font-weight: 100;
+  font-style: normal;
+  font-weight: 100;
   width: 100%;
   height: 100%;
   background-color: #000000;
@@ -19,7 +19,7 @@ body,
   --greyLight-3: #00000090;
   --greyDark: #9baacf;
   --purple: purple;
-  --hovered: #393a3d;
+  --hovered: #9f7d8a;
 
 }
 
@@ -54,7 +54,7 @@ header {
 .header-text-small {
   // font-family: 'Lato';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 0.7rem;
 }
 
@@ -70,7 +70,7 @@ footer {
   right: 0.5rem;
   bottom: 0.5rem;
   z-index: 100;
-  font-family: 'Lato';
+  // font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
   font-size: 0.6rem;
@@ -79,14 +79,14 @@ footer {
 }
 
 .footer-text-big {
-  font-family: 'Lato';
+  // font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
   font-size: 1rem;
 }
 
 .footer-text-small {
-  font-family: 'Lato';
+  // font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
   font-size: 0.6rem;
@@ -161,13 +161,18 @@ nav {
 }
 
 .guide-container p{
-  padding-bottom: 0.5rem;
+  padding-bottom: 2rem;
   font-weight: 300;
-  // border: 1px solid rgb(152, 7, 219);
+  // border: 1px solid rgb(7, 99, 219);
+}
+
+.guide-container h3{
+// padding-top: 1rem;
+// border: 1px solid rgb(152, 7, 219);
 }
 
 .guide-container title {
-  padding-bottom: 0.5rem;
+  // padding-bottom: 0.5rem;
 }
 
 .guide-container em{
@@ -176,13 +181,12 @@ nav {
 .guide-canvas{
   // margin-top: 2rem;
   // margin-bottom: 3rem;
-  border: 3px solid rgb(255, 0, 132);
+  // border: 3px solid rgb(255, 0, 132);
 }
 
 .guide-item {
   text-align: left;
-  width: min(800px, 85%, 100vw);
-  // margin: 0.2rem;
+  width: min(500px, 85%, 85vw);
   // border: 3px solid rgb(7, 219, 99);
   box-sizing: border-box;
 }
@@ -191,6 +195,9 @@ nav {
   overflow-y: scroll;
 }
 
+.image{
+  padding-bottom: 3rem;
+}
 //===============================MODAL===============================
 
 .modal {
@@ -257,13 +264,19 @@ nav {
   animation: fade-in 0.5s ease forwards;
 }
 
-.modal-title {}
+.modal-title {
+  padding-top:1rem;
+  font-weight: 300;
+  // border: 3px solid rgb(7, 219, 99);
+}
 
 .modal-short-text {
+font-weight: 100;
 
 }
+
 .button-modal {
-  font-family: "Lato";
+  // font-family: "Lato";
   font-size: 0.8rem;
   padding: 0.3rem .8rem 0.3rem 0.8rem;
 
@@ -275,7 +288,7 @@ nav {
     border: 1px solid var(--hovered);
   }
   &:active {
-    color: rgb(50, 47, 47);
+    color: rgb(124, 124, 124);
     border: 1px solid var(--hovered);
   }
 
@@ -294,7 +307,7 @@ nav {
 }
 
 .modal-collapsible {
-  font-weight: 400;
+  font-weight: 100;
   max-height: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -318,7 +331,7 @@ nav {
 }
 
 .modal-title {
-  font-weight: 900;
+  font-weight: 600;
 }
 
 @keyframes fade-in {

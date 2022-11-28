@@ -10,11 +10,9 @@ function About() {
           <p>A little about us.</p>
         </div>
         <div className="guide-item guide-scroll">
-          <h3>MassMess's mission</h3>
-          <p>
-            <em>To make you feel special</em>
-          </p>
-          <h3>Heuristic jewellery</h3>
+          <h3 className="guide-title">
+            We like calling it Heuristic jewellery
+          </h3>
           <p>
             Heuristic: <br />
             <em>
@@ -35,14 +33,13 @@ function About() {
             One shapes material with hands (in Gdańsk, Poland). Another shapes
             algorithms with hands (in Barcelona, Spain).
           </p>
-          <h3>Experiment to wear.</h3>
+          <h3>Experiment to wear</h3>
+          <p>Once, we just imagined things differently. And we just did it.</p>
           <p>
-            Once, we just imagined things differently. Nextly, we just did it.
-          </p>
-          <p>-</p>
-          <p>
-            Yours, <br />
-            MassMess x Liquid Candy
+            <i>
+              Hugs, <br />
+              MassMess x Liquid Candy
+            </i>
           </p>
         </div>
       </div>

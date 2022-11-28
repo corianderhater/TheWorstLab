@@ -33,7 +33,7 @@ export function Home() {
           <div className="modal-item inside-flex">
             <div className="inside-flex-item">
               <Buy modelData={selectedRing} />
-              <button className="button-modal">buy</button>
+              {/* <button className="button-modal">buy</button> */}
             </div>
             <div className="inside-flex-item">
               <button className="button-close" onClick={() => setIsOpen(false)}>

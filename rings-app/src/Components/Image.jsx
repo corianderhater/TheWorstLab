@@ -1,5 +1,5 @@
 import React from "react";
 
 export function Image({ url }) {
-  return <img src={url}></img>;
+  return <img className="image" src={url}></img>;
 }
