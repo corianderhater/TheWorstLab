@@ -2,7 +2,7 @@ import React from "react";
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import data from "../modelsData.json";
-import { CollipsableText } from "../Components/CollapsibleText";
+import { Gallery } from "../Components/Gallery";
 import Home3D from "../Components/Home3D";
 import Gradient from "../Components/Gradient";
 import { Buy } from "./Buy";
@@ -11,10 +11,21 @@ export function Home() {
   const [isDragging, setIsDragging] = useState(false);
   const [selectedRing, setSelectedRing] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+
   function handleClick(index) {
     setSelectedRing(data[index]);
     setIsOpen(true);
   }
+
+  function closeModal() {
+    setIsOpen(false);
+    setIsGalleryOpen(false);
+  }
+
+  const toggleGallery = () => {
+    setIsGalleryOpen(!isGalleryOpen);
+  };
 
   // const [ringIndex, setRingIndex] = useState(null);
   return (
@@ -28,15 +39,17 @@ export function Home() {
             </h5>
           </div>
           <div className="modal-item modal-collapsible ">
-            <CollipsableText modelData={selectedRing} />
+            <Gallery modelData={selectedRing} isOn={isGalleryOpen} />
           </div>
           <div className="modal-item inside-flex">
+            <button onClick={toggleGallery} className="button-modal">
+              {isGalleryOpen ? "close photos" : "see photos"}
+            </button>
             <div className="inside-flex-item">
               <Buy modelData={selectedRing} />
-              {/* <button className="button-modal">buy</button> */}
             </div>
             <div className="inside-flex-item">
-              <button className="button-close" onClick={() => setIsOpen(false)}>
+              <button className="button-close" onClick={closeModal}>
                 &#10006;
               </button>
             </div>
