@@ -242,6 +242,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  // border: 3px solid rgb(7, 219, 99);
   // width: 100%;
 }
 
@@ -320,9 +321,9 @@ font-weight: 100;
   border-width: 0px;
   font-size: 2rem;
   cursor: pointer;
-  transition: transform .5s ease-in-out;
+  transition: transform .3s ease-in-out;
   &:hover {
-      transform: rotate(360deg);
+      transform: rotate(90deg);
     }
 }
 

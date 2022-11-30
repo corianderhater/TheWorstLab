@@ -42,9 +42,11 @@ export function Home() {
             <Gallery modelData={selectedRing} isOn={isGalleryOpen} />
           </div>
           <div className="modal-item inside-flex">
-            <button onClick={toggleGallery} className="button-modal">
-              {isGalleryOpen ? "close photos" : "see photos"}
-            </button>
+            <div className="inside-flex-item">
+              <button onClick={toggleGallery} className="button-modal">
+                {isGalleryOpen ? "close photos" : "see photos"}
+              </button>
+            </div>
             <div className="inside-flex-item">
               <Buy modelData={selectedRing} />
             </div>
