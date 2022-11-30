@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ModelDescription from "./ModelDescription";
 
 export function Gallery({ modelData, isOn }) {

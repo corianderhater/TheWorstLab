@@ -12,6 +12,7 @@ export function Home() {
   const [selectedRing, setSelectedRing] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [isBuyOpen, setIsBuyOpen] = useState(false);
 
   function handleClick(index) {
     setSelectedRing(data[index]);
@@ -21,11 +22,18 @@ export function Home() {
   function closeModal() {
     setIsOpen(false);
     setIsGalleryOpen(false);
+    setIsBuyOpen(false);
   }
 
-  const toggleGallery = () => {
+  function toggleGallery() {
     setIsGalleryOpen(!isGalleryOpen);
-  };
+    setIsBuyOpen(false);
+  }
+
+  function toggleBuy() {
+    setIsBuyOpen(!isBuyOpen);
+    setIsGalleryOpen(false);
+  }
 
   // const [ringIndex, setRingIndex] = useState(null);
   return (
@@ -40,6 +48,7 @@ export function Home() {
           </div>
           <div className="modal-item modal-collapsible ">
             <Gallery modelData={selectedRing} isOn={isGalleryOpen} />
+            <Buy modelData={selectedRing} isOn={isBuyOpen} />
           </div>
           <div className="modal-item inside-flex">
             <div className="inside-flex-item">
@@ -48,11 +57,13 @@ export function Home() {
               </button>
             </div>
             <div className="inside-flex-item">
-              <Buy modelData={selectedRing} />
+              <button onClick={toggleBuy} className="button-modal">
+                {isBuyOpen ? "buy process" : "buy"}
+              </button>
             </div>
             <div className="inside-flex-item">
-              <button className="button-close" onClick={closeModal}>
-                &#10006;
+              <button className="button-modal" onClick={closeModal}>
+                <h1>&#10006;</h1>
               </button>
             </div>
           </div>
