@@ -9,7 +9,7 @@
         "img-2": "/images/szerszen/Szerszen_01_bw_zoom.JPG",
         "shortDescription":"Fluild revolving around your finger. Has no beggining, nor end.",
         "description":"",
-        "cost": 230,
+        "cost": 200,
         "material": "silver"
     },
     {
@@ -19,9 +19,9 @@
         "url": "3d/b3.glb",
         "img-1": "/images/boids/Boid_01_bw3.jpg",
         "img-2": "/images/boids/Boid_01_bw_zoom.jpg",
-        "shortDescription":"Light gets lost in this complexity, giving a different sort of glare. Just like us.",
+        "shortDescription":"Light gets lost in this complexity. Just like us.",
         "description":"",
-        "cost": 90,
+        "cost": 100,
         "material": "silver"
     },
     {
@@ -32,8 +32,8 @@
         "img-1": "/images/noise/Noise_01_bw.jpg",
         "img-2": "/images/noise/Noise_01_bw_zoom.jpg",
         "shortDescription":"So many noises around us. That is another one, simplex noise interpreted in 3d.",
-        "description":"Model: Arrate",
-        "cost": 160,
+        "description":"",
+        "cost": 200,
         "material": "silver"
     }
 ]

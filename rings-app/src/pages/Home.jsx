@@ -70,7 +70,7 @@ export function Home() {
         </div>
       )}
 
-      <Canvas>
+      <Canvas dpr={window.devicePixelRatio}>
         <Gradient height={300} />
         <Suspense fallback={null}>
           <Home3D
