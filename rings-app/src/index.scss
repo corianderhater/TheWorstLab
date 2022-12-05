@@ -143,7 +143,7 @@ nav {
 
 .guide-container{
   // border: 1px solid rgb(152, 7, 219);
-  background: rgba(0, 0, 0, 0.507);
+  background: rgba(0, 0, 0, 0.289);
   backdrop-filter: blur(20px);
   position: fixed;
   display: flex;
@@ -212,8 +212,8 @@ nav {
   bottom: 0rem;
   animation: fade-in 0.5s ease forwards;
   z-index: 30;
-  background: rgba(0, 0, 0, 0.659);
-  backdrop-filter: blur(20px);
+  background: rgb(0, 0, 0);
+  // backdrop-filter: blur(20px);
   color: rgb(255, 255, 255);
   // border: 3px solid rgb(7, 219, 99);
   box-sizing: border-box;
