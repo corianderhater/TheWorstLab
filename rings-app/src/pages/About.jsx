@@ -10,9 +10,7 @@ function About() {
           <p>A little about us.</p>
         </div>
         <div className="guide-item guide-scroll">
-          <h3 className="guide-title">
-            We like calling it Heuristic jewellery
-          </h3>
+          <h3 className="guide-title">We like calling it Heuristic jewelry</h3>
           <p>
             Heuristic: <br />
             <em>
