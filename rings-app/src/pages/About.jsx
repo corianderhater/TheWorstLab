@@ -16,15 +16,16 @@ function About() {
             <em>
               Allowing to learn by discovering things [shapes] themselves and
               learning from their own experiences rather than by telling them
-              things
+              things.
             </em>
             <br />
             <i>Definition from Cambridge Dictionary</i>
           </p>
           <h3>It is a collaboration</h3>
           <p>
-            Liquid Candy takes care of manufacturing. MassMess is programming
-            the weird shapes and the weird website.
+            <a href="http://instagram.com/yourliquidcandy">Liquid Candy </a>
+            takes care of manufacturing. MassMess is programming the weird
+            shapes and the weird website.
           </p>
           <h3>It is all hand-made</h3>
           <p>
