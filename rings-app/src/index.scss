@@ -29,31 +29,23 @@ body,
 
 header {
   background: transparent;
-  background-color: transparent;
-  color:rgb(226, 228, 227);
+  color:rgb(255, 255, 255);
   position: fixed;
   width: max-content;
   display: block;
   left: 0.5rem;
   top: 0.5rem;
   z-index: 100;
-  // font-family: 'Lato';
   font-style: normal;
-  font-weight: 300;
   -webkit-font-smoothing: antialiased;
-  
 }
 
 .header-text-big {
-  // font-family: 'Lato';
-    font-style: normal;
     font-weight: 300;
     font-size: 1rem;
 }
 
 .header-text-small {
-  // font-family: 'Lato';
-  font-style: normal;
   font-weight: 100;
   font-size: 0.7rem;
 }
@@ -143,8 +135,9 @@ nav {
 
 .guide-container{
   // border: 1px solid rgb(152, 7, 219);
-  background: rgba(0, 0, 0, 0.289);
+  background: rgba(0, 0, 0, 0.723);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(30px);
   position: fixed;
   display: flex;
   flex-direction: column;
