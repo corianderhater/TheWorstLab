@@ -1,0 +1,39 @@
+
+[
+    {
+        "index": 0,
+        "name": "Fluid flight",
+        "fullName": "Boid2",
+        "url":"3d/szerszen.glb",
+        "img-1": "/images/szerszen/Szerszen_Filip.JPG",
+        "img-2": "/images/szerszen/Szerszen_01_bw_zoom.JPG",
+        "shortDescription":"Fluild revolving around your finger. Has no beggining, nor end.",
+        "description":"",
+        "cost": 200,
+        "material": "silver"
+    },
+    {
+        "index": 1,
+        "name": "Soft bond",
+        "fullName": "Boid1",
+        "url": "3d/b3.glb",
+        "img-1": "/images/boids/Boid_01_bw3.jpg",
+        "img-2": "/images/boids/Boid_01_bw_zoom.jpg",
+        "shortDescription":"Light gets lost in this complexity. Just like us.",
+        "description":"",
+        "cost": 100,
+        "material": "silver"
+    },
+    {
+        "index": 2,
+        "name": "Random mess",
+        "fullName": "SimplexNoise",
+        "url": "3d/noise.glb",
+        "img-1": "/images/noise/Noise_01_bw.jpg",
+        "img-2": "/images/noise/Noise_01_bw_zoom.jpg",
+        "shortDescription":"So many noises around us. That is another one, simplex noise interpreted in 3d.",
+        "description":"",
+        "cost": 200,
+        "material": "silver"
+    }
+]
