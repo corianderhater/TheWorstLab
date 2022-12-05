@@ -19,7 +19,7 @@ body,
   --greyLight-3: #00000090;
   --greyDark: #9baacf;
   --purple: purple;
-  --hovered: #9f7d8a;
+  --hovered: #756e70;
 
 }
 
@@ -136,8 +136,8 @@ nav {
 .guide-container{
   // border: 1px solid rgb(152, 7, 219);
   background: rgba(0, 0, 0, 0.723);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -205,8 +205,9 @@ nav {
   bottom: 0rem;
   animation: fade-in 0.5s ease forwards;
   z-index: 30;
-  background: rgb(0, 0, 0);
-  // backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.366);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   color: rgb(255, 255, 255);
   // border: 3px solid rgb(7, 219, 99);
   box-sizing: border-box;
@@ -286,7 +287,7 @@ font-weight: 100;
   background-color: transparent;
   border: 1px solid rgb(255, 255, 255);
   border: transparent;
-  font-weight: 600;
+  font-weight: 300;
   color: rgb(255, 255, 255);
   &:hover {
     color: var(--hovered);
@@ -370,8 +371,8 @@ font-weight: 100;
   display: block;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 
