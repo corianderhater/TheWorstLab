@@ -143,8 +143,8 @@ nav {
 
 .guide-container{
   // border: 1px solid rgb(152, 7, 219);
-  background: rgba(0, 0, 0, 0.01);
-  backdrop-filter: blur(200px);
+  background: rgba(0, 0, 0, 0.507);
+  backdrop-filter: blur(20px);
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -212,8 +212,8 @@ nav {
   bottom: 0rem;
   animation: fade-in 0.5s ease forwards;
   z-index: 30;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10rem);
+  background: rgba(0, 0, 0, 0.659);
+  backdrop-filter: blur(20px);
   color: rgb(255, 255, 255);
   // border: 3px solid rgb(7, 219, 99);
   box-sizing: border-box;
@@ -377,7 +377,8 @@ font-weight: 100;
   display: block;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10rem);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
 }
 
 
