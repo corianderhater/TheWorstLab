@@ -51,8 +51,8 @@ export default function Home3D({
         minPolarAngle={Math.PI * 0.5}
         maxPolarAngle={Math.PI * 0.5}
         enableRotate={false}
-        enablePan={true}
-        enableZoom={true}
+        enablePan={false}
+        enableZoom={false}
       />
 
       {data.map((modelData, index) => {
