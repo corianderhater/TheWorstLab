@@ -156,8 +156,8 @@ nav {
   justify-content: center;
   align-items: center;
   animation: fade-in 0.5s ease-in-out forwards;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
 }
 
 .guide-container p{
@@ -216,7 +216,7 @@ nav {
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   color: rgb(255, 255, 255);
-  // border: 3px solid rgb(7, 219, 99);
+  // border: 3px solid rgb(250, 242, 0);
   box-sizing: border-box;
   padding-bottom: 1rem;
 }
@@ -226,7 +226,9 @@ nav {
 //     flex-direction: row;
 //   }
 // }
-
+.border {
+  border: 3px solid white;
+}
 .modal-item {
   text-align: left;
   width: min(800px, 80%, 100vw);

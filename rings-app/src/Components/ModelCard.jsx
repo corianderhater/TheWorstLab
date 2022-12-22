@@ -59,9 +59,7 @@ export function ModelCard({
         <group scale={scaleStart} dispose={null}>
           <mesh
             ref={bbox}
-            geometry={
-              new SphereGeometry(ringGeometry.boundingSphere.radius, 5, 5)
-            }
+            geometry={new SphereGeometry(12, 5, 5)}
             material={hitMat}
             onClick={handleClick}
             onPointerOver={(event) => hover(true)}
