@@ -10,7 +10,17 @@ function About() {
           <p>A little about us.</p>
         </div>
         <div className="guide-item guide-scroll">
-          <h3 className="guide-title">We like calling it Heuristic jewelry</h3>
+          <h3 className="guide-title">MassMess's way</h3>
+          <p>
+            It is inifinite search for forms hidden in numeric complexities.
+            Soldification of ephemeral algorithms and making them wearable is a
+            part of the plan. Trying and failing is the base for every idea.
+            Hundreds of lines of code, and hundreds of simulations are run
+            before the final shape that you see on the screen, and can actually
+            wear. Personal intuition bonds with curiosity to push myself, and
+            the design a bit further.
+          </p>
+          <h3 className="guide-title">Let's call it Heuristic jewelry</h3>
           <p>
             Heuristic: <br />
             <em>

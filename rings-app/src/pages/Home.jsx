@@ -52,17 +52,23 @@ export function Home() {
           </div>
           <div className="modal-item inside-flex">
             <div className="inside-flex-item">
-              <button onClick={toggleGallery} className="button-modal">
-                {isGalleryOpen ? "close photos" : "see photos"}
+              <button
+                onClick={toggleGallery}
+                className={`button ${isGalleryOpen ? " button-selected" : ""}`}
+              >
+                Gallery
               </button>
             </div>
             <div className="inside-flex-item">
-              <button onClick={toggleBuy} className="button-modal">
-                {isBuyOpen ? "buy process" : "buy"}
+              <button
+                onClick={toggleBuy}
+                className={`button ${isBuyOpen ? " button-selected" : ""}`}
+              >
+                Buy
               </button>
             </div>
             <div className="inside-flex-item">
-              <button className="button-modal" onClick={closeModal}>
+              <button className="button" onClick={closeModal}>
                 <h1>&#10006;</h1>
               </button>
             </div>
