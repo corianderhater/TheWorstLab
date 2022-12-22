@@ -6,6 +6,7 @@ import "../index.scss";
 import * as THREE from "three";
 import { animated, useSpring, config } from "@react-spring/three";
 import { SphereGeometry } from "three";
+import { Text } from "@react-three/drei";
 
 export function ModelCard({
   modelData,
@@ -69,7 +70,7 @@ export function ModelCard({
           <mesh ref={ref} geometry={ringGeometry}>
             {/* <MeshWobbleMaterial factor={0.04} speed={2}></MeshWobbleMaterial> */}
             <meshPhysicalMaterial
-              color={hovered ? "gold" : "white"}
+              color={hovered ? "pink" : "white"}
               clearcoat={1}
               clearcoatRoughness={1}
               roughness={0}
