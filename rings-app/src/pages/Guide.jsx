@@ -9,8 +9,8 @@ function Guide() {
           <h1>Welcome to the shopping guide: </h1>
           <h5>
             It is important for me to clear things out before order, so you are
-            the best informed. And if you are not sure, please, don't hesitete
-            to ask me directly.
+            the best informed. If you are not sure, please, don't hesitete to
+            ask me directly.
           </h5>
         </div>
         <div className="guide-item guide-scroll">
@@ -34,7 +34,12 @@ function Guide() {
             And the reason for the waiting time is that we have production
             vacations in January.
           </p>
-          <h3>Shipping</h3>
+          <h3>Payment method</h3>
+          <p>
+            We accept PayPal, bank transfer and we think of including some
+            crypto currencies soon.
+          </p>
+          <h3>Global delivery</h3>
           <p>
             We ship globally from Gdańsk, Poland. Estimated delivery time /
             Price:
@@ -46,16 +51,21 @@ function Guide() {
           </p>
           <h3>Materials</h3>
           <p>
-            All material used for jewellery is recycled. Silver. Right now we
-            use only Silver XXX. It's known for its shininess and durability.
-            Gold. Right now we produce rings out of yellow and white gold 14k
-            (585) because it is beautiful and robust.
+            All material used for jewellery is recycled. And can me bade of:
+            <ul>
+              <li>Silver 925. It's known for its shininess and durability.</li>
+              <li>
+                Gold 14k (585). We choose this type of gold because it is
+                beautiful and robust.
+              </li>
+            </ul>
           </p>
           <h3>Guarantee</h3>
           <p>
             First of all, we will use all out powers to make you happy with your
             choice. <br />
             <br /> And of course we apply to EU Guarantee and returns law:
+            <br />
             "Under EU rules, a trader must repair, replace, reduce the price or
             give you a refund if goods you bought turn out to be faulty or do
             not look or work as advertised. If you bought a product or a service
