@@ -84,7 +84,7 @@ export function Home() {
             selectedRing={selectedRing}
             handleClick={handleClick}
             setIsDragging={setIsDragging}
-            scaleAll={0.7}
+            scaleAll={0.74}
           />
         </Suspense>
       </Canvas>
