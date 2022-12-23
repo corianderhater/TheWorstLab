@@ -55,8 +55,9 @@ export function ModelCard({
   //=============================ROTATE======================================
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
+    const a = !isOpen && isAnyOpenButMe ? 70 : 1;
     ref.current.rotation.z = (Math.PI * t) / 40;
-    ref.current.rotation.y = Math.sin(t / 5);
+    ref.current.rotation.y = Math.sin(t / 5) * a;
   });
 
   return (
