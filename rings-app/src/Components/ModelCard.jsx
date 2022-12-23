@@ -12,6 +12,7 @@ export function ModelCard({
   modelData,
   positionStart,
   isOpen,
+  isAnyOpenButMe,
   scaleStart,
   onClick,
 }) {
@@ -31,7 +32,11 @@ export function ModelCard({
   }
 
   const { position } = useSpring({
-    position: isOpen ? [-40, 10, 0] : positionStart,
+    position: isOpen
+      ? [-40, 10, 0]
+      : isAnyOpenButMe
+      ? [0, 60, 0]
+      : positionStart,
     config: config.molasses,
   });
 
