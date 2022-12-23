@@ -20,7 +20,6 @@ export default function Home3D({
   const isHorizontal = window.innerWidth > window.innerHeight ? true : false;
 
   function calculatePosition(index) {
-    //const heightLimit = 46.631; //heihgt from (0,0,0) to screen edge if camera is [-100,0,0]
     const heightLimit = 46.631; //heihgt from (0,0,0) to screen edge if camera is [-100,0,0]
     const widthLimit = (window.innerWidth / window.innerHeight) * heightLimit;
     const topLoc = (heightLimit * 2) / (data.length + 1);
@@ -32,7 +31,7 @@ export default function Home3D({
       0,
       isHorizontal
         ? 0
-        : spanVer * index - spanVer + spanVer / (data.length * 2 - 1) - 5,
+        : spanVer * index - spanVer + spanVer / (data.length * 2 - 1) - 4.5,
       isHorizontal ? spanHor * index - spanHor : 0,
     ];
   }
@@ -62,6 +61,7 @@ export default function Home3D({
             key={index}
             modelData={modelData}
             isOpen={isOpen && index === selectedRing.index}
+            isAnyOpenButMe={isOpen && index != selectedRing.index}
             onClick={() => handleClick(index)}
             positionStart={calculatePosition(index)}
             scaleStart={scaleAll}
